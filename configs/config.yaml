@@ -1,0 +1,36 @@
+# Network
+hidden_dim: 512
+num_layers: 1
+decoder_layers: 2
+latent_size: 64
+latent_combine: none  # [reduce, concatenate, none]
+lods: 6
+device: cuda  # [cuda, cpu]
+path_net:
+curriculum: 3
+
+# Optimizer
+learning_rate: 0.00005
+learning_rate_latent: 0.005
+epochs_max: 10001
+conf_thres: 0.95
+scheduler_decay: 0.9
+scheduler_step: 1000
+
+# Loss weights
+w_occ: 1
+w_sdf: 1
+w_nrm: 0.1
+
+# Data
+path_data: demo/
+dataset_type: OctDB
+cpu_threads: 0
+batch_size: 32
+
+# Evaluation
+iter_log: 10
+epoch_analyze: 1000
+path_output: log/demo
+visualize: False
+wandb: demo

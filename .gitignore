@@ -1,0 +1,9 @@
+*.pt
+*.pyc
+*.pth
+*.npy
+.idea/
+log/
+wandb/
+pretrained/
+demo/octdb/
